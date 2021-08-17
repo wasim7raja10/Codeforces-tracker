@@ -1,0 +1,19 @@
+{
+  "name": "codeforces-tracker",
+  "version": "1.0.0",
+  "description": "it is a codeforces practise platform",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wasim7raja10/Codeforces-tracker.git"
+  },
+  "author": "Wasim",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wasim7raja10/Codeforces-tracker/issues"
+  },
+  "homepage": "https://github.com/wasim7raja10/Codeforces-tracker#readme"
+}
