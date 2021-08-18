@@ -12,14 +12,15 @@
   --normal-font-size: 1rem;
   --small-font-size: .75rem;
 }
-
+ /******** Color Selection Reference*********/
 /* :root{
   /*Light Theme 
 --first-color: #F4F4F4;
 --second-color: #8C4D79;
 --font-color: #121212;
 --h1toh6-color:#000000;
---card-color:#ffffff;*/
+--card-color:#ffffff;
+submit button hover:#03DAC5
 
 /*Dark Theme 
 --first-color: #121212;
@@ -29,12 +30,28 @@
 --card-color:#202124;
 } */
 
-/*===== BASE =====*/
+/******** Nav bar *********/
+
+.navcolor{
+    background-color: #333335; 
+}
+
+.material-icons:hover{
+    color: var(--first-color);
+}
+
+
+/********* Remove Scroll Effect ***********/
+html::-webkit-scrollbar {
+    width: 0px; /* For Chrome, Safari, and Opera */
+}
+
+/*===== Username Card BASE =====*/
 *,::before,::after{
   box-sizing: border-box;
 }
 body{
-  background-color: #202121;
+  background-color: #202124;
   margin: 0;
   padding: 0;
   font-family: var(--body-font);
@@ -44,12 +61,12 @@ h1{
   margin: 0;
 }
 
-/*===== FORM =====*/
+/******** Username Input ************/
 .l-form{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 90vh;
 }
 
 .form{
@@ -58,10 +75,14 @@ h1{
   padding: 4rem 2rem;
   border-radius: 1rem;
   box-shadow: 0 10px 25px rgba(121, 122, 122, 0.2);
+  position: relative;
+  top: 0;
+  transition: top ease 0.5s;
 }
 .form:hover{
     background-color: #333335;
-    border-color: rgb(63, 216, 208);
+    top: -10px;
+    
 }
 
 .form__title{
@@ -70,6 +91,7 @@ h1{
   margin-bottom: 3rem;
   font-size: 2rem;
 }
+
 .form__div{
   position: relative;
   height: 48px;
@@ -95,11 +117,12 @@ h1{
   left: 1rem;
   top: 1rem;
   padding: 0 .25rem;
-  background-color:  #202124;
+  background-color:#262729 ;
   color: var(--input-color);
   font-size: var(--normal-font-size);
   transition: .3s;
 }
+
 .form__button{
   display: block;
   margin-left: auto;
@@ -115,6 +138,8 @@ h1{
 }
 .form__button:hover{
   box-shadow: 0 10px 36px rgba(0,0,0,.15);
+  background-color: #03DAC5;
+  color: #000;
 }
 
 /*Input focus move up label*/
@@ -125,6 +150,7 @@ h1{
   font-size: var(--small-font-size);
   font-weight: 500;
   z-index: 10;
+  background-color: #333335;
 }
 
 /*Input focus sticky top label*/
@@ -141,9 +167,9 @@ h1{
   border: 1.5px solid var(--first-color);
 }
 
-
 .codeforce-icon {
   align-items: center;
   width: 100%;
   height: 60px;
 }
+/************ End Of Username Input ************/
