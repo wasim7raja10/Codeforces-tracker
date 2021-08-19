@@ -40,8 +40,6 @@ submit button hover:#03DAC5
     color: var(--first-color);
 }
 
-
-
 @media (min-width: 992px) {
   .navbar a {
     margin-left: 1em;
@@ -79,6 +77,16 @@ h1{
   padding-right: 50px;
 }
 
+@media (min-width: 200px){
+  .l-form{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 90vh;
+  padding-left: 50px;
+  }
+}
+
 .form{
   background-color:#262729 ;
   width: 360px;
@@ -91,8 +99,7 @@ h1{
 }
 .form:hover{
     background-color: #333335;
-    top: -10px;
-    
+    top: -10px;   
 }
 
 .form__title{
