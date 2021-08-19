@@ -41,6 +41,15 @@ submit button hover:#03DAC5
 }
 
 
+
+@media (min-width: 992px) {
+  .navbar a {
+    margin-left: 1em;
+    margin-right: 1em;
+  }
+}
+
+
 /********* Remove Scroll Effect ***********/
 html::-webkit-scrollbar {
     width: 0px; /* For Chrome, Safari, and Opera */
@@ -64,9 +73,10 @@ h1{
 /******** Username Input ************/
 .l-form{
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   height: 90vh;
+  padding-right: 50px;
 }
 
 .form{
