@@ -1,11 +1,14 @@
 /*===== GOOGLE FONTS =====*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
-/*===== VARIABLES CSS =====*/
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Courgette&family=Orbitron:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 :root{
   /*===== Colores =====*/
   --first-color: #B15DFF;
   --input-color: #80868B;
   --border-color: #DADCE0;
+  --font-color: #D7D7D7;
+  --h1toh6-color:#e9e9e9;
 
   /*===== Fuente y tipografia =====*/
   --body-font: 'Roboto', sans-serif;
@@ -190,3 +193,43 @@ h1{
   height: 60px;
 }
 /************ End Of Username Input ************/
+
+/*****content ************/
+
+.display-6{
+  color:var(--h1toh6-color);
+  font-weight: bold;
+  font-family:'Abril';
+}
+
+.typewrite{
+  color: #B15DFF;
+  text-decoration:none;
+  font-weight: bold;
+  font-family:'Abril';
+}
+
+/* To move the  graph */
+
+#graph {
+  animation: mover 1s ease-in-out infinite  alternate;
+  -webkit-animation: mover 1s ease-in-out infinite  alternate;
+  transform-origin: center;
+}
+
+@keyframes mover{
+  from{
+    transform:rotateX(1deg)  ;
+    -webkit-transform:rotateX(1deg)  ;
+    -moz-transform:rotateX(1deg)  ;
+    -ms-transform:rotateX(1deg)  ;
+    -o-transform:rotateX(1deg)  ;
+}
+  to{
+    transform:rotateX(25deg)  ;
+    -webkit-transform:rotateX(25deg)  ;
+    -moz-transform:rotateX(25deg)  ;
+    -ms-transform:rotateX(25deg)  ;
+    -o-transform:rotateX(25deg)  ;
+}
+}
