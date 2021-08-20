@@ -190,3 +190,8 @@ h1{
   height: 60px;
 }
 /************ End Of Username Input ************/
+
+.navbar-dark .navbar-toggler {
+  color: rgba(255,255,255,.55);
+  border : none;
+}
