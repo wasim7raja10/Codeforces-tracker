@@ -6,16 +6,20 @@ button {
   --offcanvas-width: 270px;
   --topNavbarHeight: 56px;
 }
+ /* 3 line */
 .sidebar-nav {
   width: var(--offcanvas-width);
-}
-.sidebar-link {
   display: flex;
-  align-items: center;
 }
-.sidebar-link[aria-expanded="true"] .right-icon {
+ /* 3 dot */
+ .sidebar-link {
+  width: var(--offcanvas-width);
+  display: flex;
+  
+}
+/* .sidebar-link[aria-expanded="true"] .right-icon {
   transform: rotate(180deg);
-}
+}  */
 @media (min-width: 992px) {
   body {
     overflow: auto !important;
@@ -30,6 +34,17 @@ button {
     visibility: visible !important;
     height: calc(100% - var(--topNavbarHeight));
     top: var(--topNavbarHeight);
+    
   }
 }
+
+@media screen and (max-width: 680px)
+{
+  #sidebar {
+    /* position: relative; */
+    margin-top: 3.5rem;
+}
+}
+
+
 
