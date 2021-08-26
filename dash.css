@@ -46,5 +46,16 @@ button {
 }
 }
 
+.card {
+  margin: 0 auto; /* Added */
+  float: none; /* Added */
+  margin-bottom: 10px; /* Added */
+}
 
+/* image size */
+.card-img-top {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
