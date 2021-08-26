@@ -46,13 +46,15 @@ button {
 }
 }
 
+/* Card size */
+
 .card {
   margin: 0 auto; 
   float: none; 
   margin-bottom: 10px; 
-  margin-left: 35%;
-  margin-top: 3%;
-  margin-right: 13%;
+  margin-left: 20%;
+ 
+ 
 }
 
 /* image size */
@@ -67,6 +69,7 @@ button {
   margin-top: 10rem;
 }
 
+/* upeer black part of card */
 .ds-top {
   position: absolute;
   margin: auto;
@@ -74,18 +77,19 @@ button {
   right: 0;
   left: 0;
   width: 100%;
-  height: 25%;
+  height: 30%;
   background: black;
   /* animation: dsTop 1.5s; */
 }
-
+/* image holder */
 .avatar-holder {
   position: absolute;
   margin: auto;
-  margin-top: 10%;
+  margin-top: 8%;
   margin-left: 5%;
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
+
   border-radius: 50%;
   box-shadow: 0 0 0 5px #151515,
               inset 0 0 0 5px #000000,
@@ -95,11 +99,25 @@ button {
   background: white;
   overflow: hidden;
   animation: mvTop 1.5s;
-  
+  border: solid 5px #555;
 }
+/* user name and rating name */
+.name{
+  font-size: 40px;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+#name{
+  text-align: center;
+}
+#detail{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.5rem;
+}
+
+/* footer part of card */
 .col-sm{
   font-family:sans-serif;
-  font-size: large;
+  font-size: 2rem;
   animation: fadeInMove 2s;
   animation-fill-mode: forwards;
   text-align: center;
@@ -107,13 +125,8 @@ button {
 .col-sm:hover{
   color:#B15DFF;
 }
-.name{
-  font-size: 40px;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
-}
-#detail{
-  font-family: 'Times New Roman', Times, serif;
-}
+
+/* all animation */
 @keyframes fadeInMove {
   0% {
     opacity: 0;
@@ -130,12 +143,6 @@ button {
   100% {opacity: 1;}
 }
 
-
-
-@keyframes mvBottom {
-  0% {bottom: -150px;}
-  100% {bottom: 10px;}
-}
 
 @keyframes mvTop {
   0% {top: -150px;}
@@ -155,3 +162,25 @@ button {
   background-size: cover;
   background-position: 50% 50%;
 }
+@media screen and (max-width: 720px) {
+  .ds-top {
+    height: 10%;
+  }
+  .avatar-holder{
+    width: 70px;
+    height: 70px;
+    /* margin: 20%; */
+  }
+  #name{
+    margin-top:-4rem;
+  }
+  .card{
+    width: 80%;
+    margin: 0 auto;
+  }
+  .col-sm{
+    display: flex;
+    justify-content:space-around;
+  }
+ 
+} 
