@@ -85,7 +85,7 @@ button {
 .avatar-holder {
   position: absolute;
   margin: auto;
-  margin-top: 8%;
+  margin-top: 7%;
   margin-left: 5%;
   width: 150px;
   height: 150px;
@@ -108,6 +108,7 @@ button {
 }
 #name{
   text-align: center;
+  margin-top: 3%;
 }
 #detail{
   font-family: 'Times New Roman', Times, serif;
@@ -116,7 +117,7 @@ button {
 
 /* footer part of card */
 .col-sm{
-  font-family:sans-serif;
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-size: 2rem;
   animation: fadeInMove 2s;
   animation-fill-mode: forwards;
@@ -167,9 +168,9 @@ button {
     height: 10%;
   }
   .avatar-holder{
-    width: 70px;
-    height: 70px;
-    /* margin: 20%; */
+    width: 68px;
+    height: 68px;
+    margin-top: 13%;
   }
   #name{
     margin-top:-4rem;
