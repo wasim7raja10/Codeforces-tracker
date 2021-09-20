@@ -36,7 +36,7 @@ submit button hover:#03DAC5
 /******** Nav bar *********/
 
 .navcolor{
-    background-color: #333335; 
+    background-color: #262729; 
 }
 
 .material-icons:hover{
@@ -61,7 +61,7 @@ html::-webkit-scrollbar {
   box-sizing: border-box;
 }
 body{
-  background-color: #202124;
+  background-color: #121212;
   margin: 0;
   padding: 0;
   font-family: var(--body-font);
@@ -158,8 +158,8 @@ h1{
 }
 .form__button:hover{
   box-shadow: 0 10px 36px rgba(0,0,0,.15);
-  background-color: #03DAC5;
-  color: #000;
+  background-color: #8108f3;
+  color: var(--h1toh6-color);
 }
 
 /*Input focus move up label*/
