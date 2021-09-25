@@ -1,28 +1,18 @@
-console.log("handle");
+const URL = 'https://codeforces.com/api/'
+let handle;
 
-const axios = require('axios').default;
-
-const URL = 'https://codeforces.com/api/';
-
-const userInput = document.querySelector('.form__input');
 const submitButton = document.querySelector('.form__button');
+let formInput = document.getElementById('handle');
 
-const handle;
-
-submitButton.addEventListener('click', getHandle);
-
-function getHandle() {
-  handle = userInput.textContent;
-}
-
-console.log(handle);
+submitButton.addEventListener('click', function() {
+  handle = formInput.value;
+  console.log(handle);
+})
 
 
-async function getUser() {
-  try {
-    const response = await axios.get(`${URL}user.info`);
-    console.log(response);
-  } catch (error) {
-    console.error(error);
-  }
-}
+// function getUser(handle) {
+//   axios(`${URL}user.info?handles=${handle}`)
+//     .then(res => console.log(res.data))
+//     .catch(err => console.log(err))
+// };
+// getUser(handle);
