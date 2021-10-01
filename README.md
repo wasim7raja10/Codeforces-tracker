@@ -43,7 +43,7 @@ This is code repository for a simple analytics visualization site for [Codeforce
     git checkout -b branch-2
     ``` 
 5. Add the necessary contribution and commit those contributions.
-    To add the necessary contrbution that will get you accepeted refer **contributiion.md** file.
+    To add the necessary contrbution that will get you accepeted refer [CONTRIBUTING.md](/home/wasim/github/Codeforces-tracker/CONTRIBUTING.md) file.
 
     Add those changes to the branch you just created using the below command.
      ```
