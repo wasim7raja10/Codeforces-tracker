@@ -9,7 +9,7 @@
 ![GitHub language count](https://img.shields.io/github/languages/count/wasim7raja10/Codeforces-tracker?style=normal)
 ![GitHub top language](https://img.shields.io/github/languages/top/wasim7raja10/Codeforces-tracker?style=normal)
 
-This is code repository for a simple analytics visualization site for Codeforces online judge users using Codeforces API.
+This is code repository for a simple analytics visualization site for [Codeforces](http://codeforces.com/) online judge users using [Codeforces API](https://codeforces.com/apiHelp).
 
 ## Prerequisites:
 * Install git in your machine.
