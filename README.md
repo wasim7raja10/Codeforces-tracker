@@ -43,11 +43,8 @@ This is code repository for a simple analytics visualization site for Codeforces
     git checkout -b branch-2
     ``` 
 5. Add the necessary contribution and commit those contributions.
-    To add the necessary contrbution that will get you accepeted refer contributiion.md file.
-    After making the changes type in the below command this command will let you know which files have been modified.
-   ```
-    git clone 
-    ```
+    To add the necessary contrbution that will get you accepeted refer **contributiion.md** file.
+
     Add those changes to the branch you just created using the below command.
      ```
     git add .
