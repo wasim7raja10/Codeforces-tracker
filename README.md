@@ -16,63 +16,11 @@ This is code repository for a simple analytics visualization site for [Codeforce
 * Have basic command line experiance.
 * have knowledge of basic Javascript, HTML, CSS
 
-## Follow the given steps
+## Resources to follow to contribute to this project or any open source project
 
-1. Fork this repository 
-   Click the button on top right corner labelled fork.
-2. Clone this repository using the link into your local machine.
-   On the forked repo click the green button labelled code and copy the https url.
-   Once it is copied open the terminal/cmd and type in the following code
-   ```
-    git clone "http url you just copied"
-    ```
-    
-3. Going to the required project directory
+1. Read this [guide](https://www.digitalocean.com/community/tutorial_series/an-introduction-to-open-source) to open-source contribution.
 
-   ```
-    cd Codeforces-tracker
-    ```
-4. Create a branch
-   The best practise is to create another branch work on it and finally merge it .
-   So after changing to project directory ,to creata new branch type in the foll code.
-   ```
-    git checkout -b your_new_branch_name
-    ```
-    for example : 
-    ```
-    git checkout -b branch-2
-    ``` 
-5. Add the necessary contribution and commit those contributions.
-    To add the necessary contrbution that will get you accepeted refer [CONTRIBUTING.md](https://github.com/wasim7raja10/Codeforces-tracker/blob/main/CONTRIBUTING.md) file.
-
-    Add those changes to the branch you just created using the below command.
-     ```
-    git add .
-    ``` 
-    Now commit those changes using the below command:
-    
-     ```
-    git commiit -m "The changes that you done must be mentioned here"
-    ```
-<!--  
-6. Merge the branch into the main branch -->
-
-6. Push changes to github
-    Push your changes using the below command:
-
-    ```
-    git push origin branch_name
-    ```
-    replace branch_name with the name of the branch you created earlier.
-    
-    For example:
-    
-    ```
-    git push origin branch-2
-    ```
-7. Submit your changes for review
-    If you go to your repository on GitHub, you'll see a Compare & pull request button. Click on that button.
-    Then if you want to mention anything about the changes type it in and finally  submit the pull request.
+2. To add the necessary contribution that will get you Pull Request accepeted refer [CONTRIBUTING.md](/home/wasim/github/Codeforces-tracker/CONTRIBUTING.md) file.
 
 ## Rules and Regulations
 
@@ -88,7 +36,7 @@ This is code repository for a simple analytics visualization site for [Codeforce
 
 6. This year, the first 50,000 participants can earn a T-shirt.
 
-### examples of low quailty contributions
+### Examples of low quailty contributions
 
 + Pull requests that are automated e.g. scripted opening pull requests to remove whitespace / fix typos / optimize images.
 
