@@ -2,30 +2,99 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
-    <!-- bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
-    <!--  -->
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./stylesheet/style.css" />
 
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+  <!-- material icon  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <title>Codeforces Tracker</title>
 </head>
 
 <body>
-    <p>1st cmmited</p>
-    
+  <!-- NavBar -->
+  <nav class="navcolor navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand text-white" href="./index.html">
+        <img src="https://codeforces-upsolving-helper.herokuapp.com/static/images/codeforces-icon.png" alt="" width="30"
+          height="24" class="d-inline-block align-text-top" />
+        Codeforces Tracker
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
+        aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link active text-white" aria-current="page" href="#">
+            <span class="material-icons align-bottom"> home </span>
+            HOME
+          </a>
+          <a class="nav-link text-white" href="#">
+            <span class="material-icons align-bottom"> emoji_events</span>
+            CONTEST
+          </a>
+          <a class="nav-link text-white" href="#">
+            <span class="material-icons align-bottom"> compare </span>
+            COMPARE
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+  <!-- grid -->
 
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <div class="l-form">
+          <form action="./sidenav.html" class="form">
+            <object class="codeforce-icon" data="./img/cf.svg" type="image/svg+xml"></object>
+            <h1 class="form__title">Codeforces Handle</h1>
 
-    <!-- bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
-        crossorigin="anonymous">
-    </script>
-    <!--  -->
+            <!-- username input -->
+            <div class="form__div">
+              <input type="text" name="handle" id="handle" class="form__input" placeholder=" " />
+              <label for="handle" class="form__label">Codeforces Handle</label>
+            </div>
+            <input type="submit" class="form__button" value="Submit" />
+          </form>
+        </div>
+      </div>
+
+      <div class="col align-self-center">
+        <h1 class="display-6">Track your <a class="typewrite" data-period="2000"
+            data-type='["Profile", "Contest History", "Submission History", "Progress", "Todo"]'>
+          </a></h1><br>
+
+        <!--SVG CODE-->
+        <div class="front-image">
+          <object data="./img/home.svg" type="image/svg+xml"></object>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
+  </script>
+
+  <!-- axios -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+  <!-- Typewriter Effect JS -->
+  <script src="./js/typewriter.js"></script>
+  <!-- End of Typewriter Effect JS  -->
+
+  <script src="./js/data.js"></script>
+  <script src="./js/index.js"></script>
+
 </body>
 
 </html>
