@@ -33,3 +33,6 @@ After you have submitted the PR and you wish to submit a new PR, you require som
 2. [Google Chart](https://developers.google.com/chart) for charts
 
 3. [Axios](https://www.npmjs.com/package/axios) for getting data from [Codeforces API](https://codeforces.com/apiHelp)
+
+*UI of the web app* -> [drive](https://drive.google.com/file/d/1UtiWpcFj6Ij_147YWT3duR8FXmY85VYY/view?usp=drivesdk)
+
