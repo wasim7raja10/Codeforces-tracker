@@ -25,3 +25,11 @@
 Before making any changes to the Project, read [How To Create a Pull Request on GitHub](https://www.digitalocean.com/community/tutorials/how-to-create-a-pull-request-on-github). Ensure you follow the correct workflow to get your PR accepted.
 
 After you have submitted the PR and you wish to submit a new PR, you require some rebasing and reworking of code prior to acceptance, followed by a general cleanup of your branches. Read this [article](https://www.digitalocean.com/community/tutorials/how-to-rebase-and-update-a-pull-request).
+
+## Tools that are used
+
+1. [Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/) for styling.
+
+2. [Google Chart](https://developers.google.com/chart) for charts
+
+3. [Axios](https://www.npmjs.com/package/axios) for getting data from [Codeforces API](https://codeforces.com/apiHelp)
