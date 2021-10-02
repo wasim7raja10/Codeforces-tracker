@@ -26,6 +26,12 @@ Before making any changes to the Project, read [How To Create a Pull Request on 
 
 After you have submitted the PR and you wish to submit a new PR, you require some rebasing and reworking of code prior to acceptance, followed by a general cleanup of your branches. Read this [article](https://www.digitalocean.com/community/tutorials/how-to-rebase-and-update-a-pull-request).
 
+*UI of the web app* -> [drive](https://drive.google.com/file/d/1UtiWpcFj6Ij_147YWT3duR8FXmY85VYY/view?usp=drivesdk)
+
+### You can create issues and contribute to it if we approve the issues. 
+You can check the UI and if you can add some section or enhance some section you are free to create issues for it and contribute after we approve the issues.
+
+
 ## Tools that are used
 
 1. [Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/) for styling.
@@ -34,5 +40,5 @@ After you have submitted the PR and you wish to submit a new PR, you require som
 
 3. [Axios](https://www.npmjs.com/package/axios) for getting data from [Codeforces API](https://codeforces.com/apiHelp)
 
-*UI of the web app* -> [drive](https://drive.google.com/file/d/1UtiWpcFj6Ij_147YWT3duR8FXmY85VYY/view?usp=drivesdk)
+
 
