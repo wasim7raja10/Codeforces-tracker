@@ -20,7 +20,7 @@ This is code repository for a simple analytics visualization site for [Codeforce
 
 1. Read this [guide](https://www.digitalocean.com/community/tutorial_series/an-introduction-to-open-source) to open-source contribution.
 
-2. To add the necessary contribution that will get your Pull Request accepeted refer [CONTRIBUTING.md](/home/wasim/github/Codeforces-tracker/CONTRIBUTING.md) file.
+2. To add the necessary contribution that will get your Pull Request accepeted refer [CONTRIBUTING.md](https://github.com/wasim7raja10/Codeforces-tracker/blob/main/CONTRIBUTING.md) file.
 
 ## Rules and Regulations
 
