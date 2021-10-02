@@ -1,3 +1,4 @@
+'use strict';   // This statement tells the browser to use the Strict mode application for Js file or any specific function, just to make our code safe.
 let arrow = document.querySelectorAll(".arrow");
 for (var i = 0; i < arrow.length; i++) {
   arrow[i].addEventListener("click", (e)=>{
