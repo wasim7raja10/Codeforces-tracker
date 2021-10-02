@@ -235,7 +235,7 @@
   font-weight: 600;
 }
 
-/* Responsivne */
+/* Responsivne Section */
 @media only screen and (max-width: 600px) {
   .sidebar.close {
     display: none;
