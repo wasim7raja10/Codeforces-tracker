@@ -231,6 +231,23 @@
   font-weight: 600;
 }
 
+footer{
+  background-color: rgb(25, 24, 29);
+}
+
+.footertext{
+  color: white; 
+  font-family: 'Open Sans', sans-serif; 
+  display:inline-block;
+  font-size: 100%;
+
+}
+
+.right {
+  position: absolute;
+  right: 0px;
+}
+
 /* Responsivne */
 @media only screen and (max-width: 600px) {
   .sidebar.close {
