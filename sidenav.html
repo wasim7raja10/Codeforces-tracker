@@ -1,39 +1,139 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-  <head>
-    <meta charset="UTF-8">
-    <title>Codeforces Tracker | Profile</title>
-    <!-- Bootstrap CSS -->
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
-      crossorigin="anonymous"
-    />
-    <link rel="stylesheet" href="./stylesheet/sidenav.css">
-    <link rel="stylesheet" href="./stylesheet/style.css" />
-    <!-- Boxiocns CDN Link -->
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-         <!-- material icon  -->
-     <link
-     href="https://fonts.googleapis.com/icon?family=Material+Icons"
-     rel="stylesheet"
-   />
-   </head>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Codeforces Tracker | Profile</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
+  <link rel="stylesheet" href="./stylesheet/sidenav.css">
+  <link rel="stylesheet" href="./stylesheet/style.css" />
+  <link rel="stylesheet" href="./stylesheet/heatmap.css" />
+  <!-- Boxiocns CDN Link -->
+  <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- material icon  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+  <!-- Heat Map -->
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script type="text/javascript" src="./js/heatmap.js"></script>
+  <link href="./js/heatmap.js" media="all" rel="stylesheet" />
+
+  <script type="text/javascript">
+    //Generate random number between min and max
+    function randomInt(min, max) {
+      return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+
+    function getRandomTimeStamps(min, max, fromDate, isObject) {
+      var return_list = [];
+
+      var entries = randomInt(min, max);
+      for (var i = 0; i < entries; i++) {
+        var day = fromDate ? new Date(fromDate.getTime()) : new Date();
+
+        //Genrate random
+        var previous_date = randomInt(0, 365);
+        if (!fromDate) {
+          previous_date = -previous_date;
+        }
+        day.setDate(day.getDate() + previous_date);
+
+        if (isObject) {
+          var count = randomInt(1, 20);
+          return_list.push({
+            timestamp: day.getTime(),
+            count: count
+          });
+        } else {
+          return_list.push(day.getTime());
+        }
+
+
+      }
+
+      return return_list;
+
+    }
+    $(document).ready(function () {
+
+
+      $('#github_chart_1').github_graph({
+        //Generate random entries from 50-> 200 entries
+        data: getRandomTimeStamps(50, 500, null, false),
+        texts: ['completed task', 'completed tasks']
+      });
+
+
+      $('#heatmap').github_graph({
+        //Generate random entries from 10-> 100 entries
+        data: getRandomTimeStamps(10, 100, null, false),
+        texts: ['comment', 'comments'],
+        //override colours
+        colors: ['rgba(0,0,0,0.3)', '#d6e685', '#8cc665', '#44a340', '#44a340'],
+      });
+      // start from 1 Jan 2022
+      var start_from_2022 = new Date(2022, 00, 00, 0, 0, 0);
+
+      $('#github_chart_3').github_graph({
+        start_date: start_from_2022,
+        //Generate random entries from 10-> 100 entries
+        data: getRandomTimeStamps(5, 100, start_from_2022, true),
+        texts: ['category', 'categories'],
+        border: {
+          radius: 5,
+          hover_color: "red"
+        },
+        //Override month names
+        month_names: ['T1', 'T2', 'T3', 'T4', 'T5', 'T6', 'T7', 'T8', 'T9', 'T10', 'T11', 'T12'],
+        h_days: ['2', '4', '6'],
+        //override colours with custom count
+        colors: [{
+            count: 0,
+            color: 'gray'
+          },
+          {
+            count: 5,
+            color: 'purple'
+          },
+          {
+            count: 10,
+            color: 'yellow'
+          },
+          {
+            count: 15,
+            color: 'green'
+          },
+          {
+            count: 20,
+            color: 'red'
+          }
+        ],
+        // callback when click on selected date
+        click: function (date, count) {
+          alert('You clicked on: ' + date + ' with count is ' + count);
+        },
+      });
+
+    });
+  </script>
+</head>
+
 <body id="body-pd">
-    
+
   <!-- side navbar -->
 
   <div class="sidebar close" id="nav-bar">
     <div class="logo-details">
       <i class='bx bxl-c-plus-plus'></i>
-      <span class="logo_name">Tracker</span> 
+      <span class="logo_name">Tracker</span>
     </div>
     <ul class="nav-links">
       <li>
         <a href="./index.html" class="nav__link">
-          <i class='bx bx-home' ></i>
+          <i class='bx bx-home'></i>
           <span class="link_name">Home</span>
         </a>
         <ul class="sub-menu blank">
@@ -43,7 +143,7 @@
       <li>
         <div class="iocn-link">
           <a href="#" class="nav__link">
-            <i class='bx bx-user' ></i>
+            <i class='bx bx-user'></i>
             <span class="link_name">Profile</span>
           </a>
         </div>
@@ -74,7 +174,7 @@
       </li>
       <li>
         <a href="#" class="nav__link">
-          <i class='bx bx-pie-chart-alt-2' ></i>
+          <i class='bx bx-pie-chart-alt-2'></i>
           <span class="link_name">Submission</span>
         </a>
         <ul class="sub-menu blank">
@@ -84,7 +184,7 @@
       <li>
         <div class="iocn-link">
           <a href="#" class="nav__link">
-            <i class='bx bx-box' ></i>
+            <i class='bx bx-box'></i>
             <span class="link_name">Ladder</span>
           </a>
         </div>
@@ -94,7 +194,7 @@
       </li>
       <li>
         <a href="#" class="nav__link">
-          <i class='bx bx-line-chart' ></i>
+          <i class='bx bx-line-chart'></i>
           <span class="link_name">Contest History</span>
         </a>
         <ul class="sub-menu blank">
@@ -103,34 +203,61 @@
       </li>
       <li>
         <a href="#" class="nav__link">
-          <i class='bx bx-clipboard' ></i>
-          <span class="link_name" >TODO</span>
+          <i class='bx bx-clipboard'></i>
+          <span class="link_name">TODO</span>
         </a>
         <ul class="sub-menu blank">
           <li><a class="link_name" href="#">TODO</a></li>
         </ul>
       </li>
-</ul>
-</div>
-      
-    <!-- end of side navbar -->
+    </ul>
+  </div>
+
+  <!-- end of side navbar -->
   <section class="home-section" id="header">
-      <div class="home-content header__toggle">
-       <i class='bx bx-menu' id="header-toggle" ></i>
-      <span class="text">Codeforces <span class="text2" > Tracker</span></span> 
-     </div>
-      
+    <div class="home-content header__toggle">
+      <i class='bx bx-menu' id="header-toggle"></i>
+      <span class="text">Codeforces <span class="text2"> Tracker</span></span>
+    </div>
+
+    <div class="container">
+      <!-- Heat Map Chart -->
+      <div class="col mt-3 mb-4">
+        <div class=" col mt-1 ms-1 me-1 titles">
+          <span class=" row ms-4 graphtitles ">Year Log</span>
+          <div class=" row graphtitle ">
+            <h5 class="heatmap-heading"> 2784 Problem Solved</h5>
+            <p class="para"> Solved for all times</p>
+            <h5 class="heatmap-heading"> 7 Days</h5>
+            <p class="para"> in a row in matrix</p>
+          </div>
+          <div class=" row graphtitle ">
+            <h5 class="heatmap-heading"> 455 Problems</h5>
+            <p class="para"> problems sloved for last year</p>
+            <h5 class="heatmap-heading"> 5 Days</h5>
+            <p class="para">in a row for last year</p>
+          </div>
+          <div class=" row graphtitle ">
+            <h5 class="heatmap-heading"> 32 Problems</h5>
+            <p class="para"> Solved for last month</p>
+            <h5 class="heatmap-heading"> 2 Days</h5>
+            <p class="para"> in a row for last month</p>
+          </div>
+        </div>
+        <div class="chart col ms-1 me-1 ps-2 mb-4" id="heatmap"> </div>
+      </div>
+    </div>
+
   </section>
 
 
 
   <script src="./js/script.js"></script>
-  <script
-  src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
-  integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
-  crossorigin="anonymous"
-  ></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous">
+  </script>
   <script src="./js/data.js"></script>
 
 </body>
+
 </html>
