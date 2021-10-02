@@ -1,0 +1,137 @@
+/******************************Heat Map *************************** */
+.svg-tip {
+    padding: 30px;
+    background: rgba(0,0,0,0.8);
+    color: #bbb;
+    font-size: 12px;
+    position: absolute;
+    z-index: 99999;
+    text-align: center;
+    border-radius: 3px;
+  }
+  
+  .svg-tip:after {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: absolute;
+    left: 50%;
+    height: 5px;
+    width: 5px;
+    bottom: -10px;
+    margin: 0 0 0 -5px;
+    content: " ";
+    border: 5px solid transparent;
+    border-top-color: rgba(0,0,0,0.8);
+  }
+  
+  .chart{
+    height: 220px;
+    border-radius: 10px;
+  }
+  
+  .svg-tip {
+    padding: 10px;
+    background: rgba(0,0,0,0.8);
+    color: #bbb;
+    font-size: 12px;
+    position: absolute;
+    z-index: 99999;
+    text-align: center;
+    border-radius: 3px;
+    
+  }
+  
+  .svg-tip:after {
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: absolute;
+    left: 50%;
+    height: 5px;
+    width: 5px;
+    bottom: -10px;
+    margin: 0 0 0 -5px;
+    content: " ";
+    border: 5px solid transparent;
+    border-top-color: rgba(0,0,0,0.8);
+    
+  }
+  
+  .chart{
+    height:450px;
+    border-radius: 0 0 10px 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: #262729;
+  }
+  
+  .bubblechart{
+    height: 500px;
+    border-radius: 0 0 10px 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    background-color: #262729;
+  }
+  
+  .js-calendar-graph-svg{
+    width: 100%;
+    height: 250px;
+    padding-top:5%;
+    overflow: hidden;
+  }
+  
+  text.month, .wday{
+    fill: #D7D7D7;
+  }
+  .yearlog{
+    color: #ffffff;
+  }
+  
+  
+  .titles{
+    background: #616161;
+    display: flex;
+    justify-content: flex-start;
+    height: 30px;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .title{
+    display: flex;
+    justify-content: flex-start;
+    height: 30px;
+    border-radius: 10px 10px 0 0;
+  }
+  
+  .graphtitles{
+    display: flex;
+    justify-content: center;
+    background-color: #242323;
+    color: #FFFFFF;
+    height: 25px;
+    width: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 2px;
+    border-radius: 5px;
+    font: 1em;
+    font-weight: 500;
+  }
+  
+  
+  .graphtitle{
+    display: flex;
+    justify-content: center;
+    color: #FFFFFF;
+    height: 25px;
+    width: auto;
+    padding-top: 25%;
+    padding-left: 70px;
+    padding-right: 10px;
+    margin-top: 2px;
+  }
+  
+  .heatmap-heading{
+    margin-bottom: auto;
+    color: #FFFFFF;
+  }
+  .para{
+    color: #D7D7D7;
+  }
