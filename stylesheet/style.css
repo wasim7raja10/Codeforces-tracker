@@ -251,3 +251,30 @@ h1 {
     -o-transform: rotateX(25deg);
   }
 }
+
+.chart_container{
+  display: flex;
+  justify-content: space-evenly !important;
+  align-items: center !important;
+  height: 500px;
+  width: 100%;
+}
+
+.piechart, .piechart_2{
+  width: 450px;
+  height: 300px;
+}
+
+@media only screen and (max-width: 1022px){
+  .chart_container{
+      flex-direction: column;
+      height: 100vh;
+  }
+}
+
+@media only screen and (max-width: 660px){
+  .piechart, .piechart_2{
+    width: 350px;
+    height: 250px;
+  }
+}

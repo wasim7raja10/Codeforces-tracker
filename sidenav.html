@@ -21,6 +21,9 @@
   <script type="text/javascript" src="./js/heatmap.js"></script>
   <link href="./js/heatmap.js" media="all" rel="stylesheet" />
 
+  <!-- Google pie chart -->
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
   <script type="text/javascript">
     //Generate random number between min and max
     function randomInt(min, max) {
@@ -118,6 +121,46 @@
       });
 
     });
+
+    google.charts.load('current', {'packages':['corechart']});
+     google.charts.setOnLoadCallback(drawChart);
+ 
+     function drawChart() {
+ 
+       var data = google.visualization.arrayToDataTable([
+         ['Task', 'Hours per Day'],
+         ['Label 1',     11],
+         ['Label 2',      2],
+         ['Label 3',  2],
+         ['Label 4', 2],
+         ['Label 5',    7],
+         ['Label 6', 10]
+       ]);
+
+       var options = {
+         title: 'Verdict',
+         backgroundColor: '#2d2f34',
+         titleTextStyle: {
+            color: 'white'
+         },
+         legend: { position: 'left', textStyle: { color: 'white' } }
+       };
+
+       var options_2 = {
+         title: 'languages',
+         backgroundColor: '#2d2f34',
+         titleTextStyle: {
+            color: 'white'
+         },
+         legend: { position: 'left', textStyle: { color: 'white'} }
+       };
+ 
+       var chart = new google.visualization.PieChart(document.querySelector('.piechart'));
+       chart.draw(data, options);
+
+       var chart_2 = new google.visualization.PieChart(document.querySelector('.piechart_2'));
+       chart_2.draw(data, options_2);
+     }
   </script>
 </head>
 
@@ -215,13 +258,12 @@
 
   <!-- end of side navbar -->
   <section class="home-section" id="header">
-    <div class="home-content header__toggle">
+    <!-- <div class="home-content header__toggle">
       <i class='bx bx-menu' id="header-toggle"></i>
       <span class="text">Codeforces <span class="text2"> Tracker</span></span>
-    </div>
+    </div> -->
 
-    <div class="container">
-      <!-- Heat Map Chart -->
+    <!-- <div class="container">
       <div class="col mt-3 mb-4">
         <div class=" col mt-1 ms-1 me-1 titles">
           <span class=" row ms-4 graphtitles ">Year Log</span>
@@ -246,6 +288,11 @@
         </div>
         <div class="chart col ms-1 me-1 ps-2 mb-4" id="heatmap"> </div>
       </div>
+    </div> -->
+
+    <div class='chart_container'>
+      <div class="piechart"></div>
+      <div class="piechart_2"></div>
     </div>
 
   </section>
