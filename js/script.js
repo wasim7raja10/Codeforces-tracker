@@ -14,7 +14,7 @@ sidebarBtn.addEventListener("click", ()=>{
 
 
    /*===== SHOW NAVBAR  =====*/ 
-   const showNavbar = (toggleId, navId, bodyId, headerId) =>{
+   const showNavbar = (toggleId, navId, bodyId, headerId,bottomId) =>{
     const toggle = document.getElementById(toggleId),
     headerpd = document.getElementById(headerId)
 
