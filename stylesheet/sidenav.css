@@ -233,18 +233,21 @@
 
 
 
-.footertext{
-  color: white; 
-  font-family: 'Open Sans', sans-serif; 
-  display:inline-block;
-  font-size: 100%;
-
+#footertext{
+  background:  rgb(25, 24, 29);
+  height: auto;
 }
-
 .right {
   position: absolute;
   right: 0px;
 }
+.textfooter{
+  font-family: 'Open Sans', sans-serif; 
+  color: #FFFFFF;
+  padding-left: 4%;
+  padding-right: 4% ;
+}
+
 
 /* Responsivne */
 @media only screen and (max-width: 600px) {
