@@ -231,7 +231,34 @@
   font-weight: 600;
 }
 
-/* Responsivne */
+ /* footer part  */
+.footer{
+  padding: 1rem;
+  background-color: #1F1B24;
+  color: white;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  left:260px;
+  width: calc(100% - 260px);
+  transition: all 0.5s ease;
+  position: fixed;
+  bottom: 0;
+}
+
+.sidebar.close ~ .footer{
+  left: 78px;
+  width: calc(100% - 78px);
+}
+.foot{
+  display: flex;
+  gap: 8px;
+}
+.footer a{
+  color: white;
+}
+
+ /* Responsivne  */
 @media only screen and (max-width: 600px) {
   .sidebar.close {
     display: none;
@@ -240,6 +267,10 @@
     left: 1px;
     width: calc(100% - 1px);
   }
- 
+  .sidebar.close ~ .footer{
+    left: 1px;
+    width: 100%;
+  }
 }
+
 
