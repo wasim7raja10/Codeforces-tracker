@@ -250,6 +250,13 @@
   left: 78px;
   width: calc(100% - 78px);
 }
+.foot{
+  display: flex;
+  gap: 8px;
+}
+.footer a{
+  color: white;
+}
 
  /* Responsivne  */
 @media only screen and (max-width: 600px) {
