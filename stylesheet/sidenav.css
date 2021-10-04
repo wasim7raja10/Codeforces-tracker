@@ -21,6 +21,7 @@
   width: 2px;
   height: 32px;
   background-color: #B15DFF;
+  color: #fff;
 }
 .sidebar{
   position: fixed;
@@ -95,9 +96,9 @@
 }
 .sidebar .nav-links li i{
   height: 50px;
-  min-width: 390px;
+  min-width: 420px;
   position: relative;
-  left: -155px;
+  left: -172px;
   text-align: center;
   line-height: 50px;
   color: #757575;
@@ -108,6 +109,7 @@
 .sidebar .nav-links li i:hover{
   color: #FFFFFF;
 }
+
 .sidebar .nav-links li.showMenu i.arrow{
   transform: rotate(-180deg);
 }
@@ -124,13 +126,13 @@
   font-weight: 400;
   color: #e9e9e9;
   position: relative;
-  left: -310px;
+  left: -330px;
   transition: all 0.4s ease;
-  
 }
 .sidebar .nav-links li a .link_name:hover{
   color: #FFFFFF;
   display: block;
+  pointer-events: none;
 }
 
 .sidebar.close .nav-links li a .link_name{
