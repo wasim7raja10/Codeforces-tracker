@@ -278,3 +278,15 @@ h1 {
     height: 250px;
   }
 }
+
+.histo{
+  width: 450px;
+  height: 300px;
+}
+
+@media only screen and (max-width: 660px){
+  .histo{
+    width: 350px;
+    height: 250px;
+  }
+}

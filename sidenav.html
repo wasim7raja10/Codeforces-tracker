@@ -162,6 +162,64 @@
        chart_2.draw(data, options_2);
      }
   </script>
+  <!-- histogram -->
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load("current", {packages:['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ["Problem","Level", { role: "style" } ],
+        ["A", 250, "color: #8906d4"],
+        ["B", 170, "#8906d4"]
+        // ["C", 170, "#8906d4"]
+
+
+      ]);
+      var data_2 = google.visualization.arrayToDataTable([
+      ["Score","Ranking", { role: "style" } ],
+        ["800", 50, "#8906d4"],
+        ["900", 120, "color: #8906d4"]
+      ]);
+
+
+      var view = new google.visualization.DataView(data);
+      var view_2 = new google.visualization.DataView(data_2);
+      var options = {
+        title: "Levels",
+       
+        backgroundColor: '#2d2f34',
+        titleTextStyle: {
+            color: 'white'
+         },
+        bar: {groupWidth: "50%"},
+        legend: { position: "none" },
+      };
+      var options_2 = {
+        title: "Power Rating",
+      
+        backgroundColor: '#2d2f34',
+        titleTextStyle: {
+            color: 'white'
+         },
+         textStyle:{color:"white"},
+        bar: {groupWidth: "50%"},
+        legend: { position: "none" ,textStyle: { color: 'white' } },
+      };
+      var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
+      chart.draw(view, options);
+      var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values_2"));
+      chart.draw(view_2, options_2);
+  }
+  </script>
+
+
+
+
+
+
+
+
 </head>
 
 <body id="body-pd">
@@ -293,6 +351,11 @@
     <div class='chart_container'>
       <div class="piechart"></div>
       <div class="piechart_2"></div>
+    </div>
+    <div class='chart_container'>
+      <div id="columnchart_values" class="histo"></div>
+      <div id="columnchart_values_2" class="histo"></div>
+
     </div>
 
   </section>
