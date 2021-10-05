@@ -183,7 +183,7 @@
       var view = new google.visualization.DataView(data);
       var view_2 = new google.visualization.DataView(data_2);
       var options = {
-        title: "Levels",
+       
        
         backgroundColor: '#2d2f34',
         titleTextStyle: {
@@ -215,7 +215,7 @@
       
       };
       var options_2 = {
-        title: "Power Rating",
+       
       
         backgroundColor: '#2d2f34',
         titleTextStyle: {
@@ -386,11 +386,46 @@
       <div class="piechart"></div>
       <div class="piechart_2"></div>
     </div>
-    <div class='chart_container'>
-      <div id="columnchart_values" class="histo"></div>
-      <div id="columnchart_values_2" class="histo"></div>
+
+<!-- start -->
+
+<div class="chart_container">
+  <div class="col-6 mt-3 mb-4">
+    <div class=" col mt-1 ms-1 me-1 titles">
+      <span class=" row ms-4 graphtitles ">Levels</span>
+     
+      
+    </div>
+    <div id="columnchart_values" class="chart col ms-1 me-1 ps-2 mb-4"></div>
+  </div>
+  <div class="col-6 mt-3 mb-4">
+    <div class=" col mt-1 ms-1 me-1 titles">
+      <span class=" row ms-4 graphtitles ">Power Rankings</span>
+     
+      
+    </div>
+    <div id="columnchart_values_2" class=" chart col ms-1 me-1 ps-2 mb-4"></div>
+  </div>
+</div>
+
+<!-- end -->
+
+
+
+   <!-- <div class='chart_container'>
+
+    mt-3 mb-4
+      <div class=" col-6 mt-1 ms-1 me-1 titles">
+      <span class=" row-6 ms-4 graphtitles ">Year Log</span>
 
     </div>
+    <div class=" col-6 mt-1 ms-1 me-1 titles">
+      <span class=" row-6 ms-4 graphtitles ">Year Log</span>
+      <div id="columnchart_values_2" class="histo"></div>
+    </div>
+ 
+
+    </div> -->
 
   </section>
   <section class="footer">
