@@ -168,6 +168,7 @@
     google.charts.load("current", {packages:['corechart']});
     google.charts.setOnLoadCallback(drawChart);
     function drawChart() {
+
       var data = google.visualization.arrayToDataTable([
         ["Problem","Level", { role: "style" } ],
         ["A", 250, "color: #8906d4"],
@@ -176,6 +177,12 @@
 
 
       ]);
+      
+    
+
+
+
+
       var data_2 = google.visualization.arrayToDataTable([
       ["Score","Ranking", { role: "style" } ],
         ["800", 50, "#8906d4"],
@@ -193,7 +200,29 @@
             color: 'white'
          },
         bar: {groupWidth: "50%"},
+
+
+        hAxis: {
+        textStyle: {
+            color: 'white'
+        },
+        titleTextStyle: {
+            color: 'white'
+        }
+    },
+    vAxis: {
+        textStyle: {
+            color: 'white'
+        },
+        titleTextStyle: {
+            color: 'white'
+        }
+    },
+
+
         legend: { position: "none" },
+        
+      
       };
       var options_2 = {
         title: "Power Rating",
@@ -204,7 +233,30 @@
          },
          textStyle:{color:"white"},
         bar: {groupWidth: "50%"},
+
+        
+        hAxis: {
+        textStyle: {
+            color: 'white'
+        },
+        titleTextStyle: {
+            color: 'white'
+        }
+    },
+    vAxis: {
+        textStyle: {
+            color: 'white'
+        },
+        titleTextStyle: {
+            color: 'white'
+        }
+    },
+
+
         legend: { position: "none" ,textStyle: { color: 'white' } },
+        
+
+
       };
       var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
       chart.draw(view, options);
