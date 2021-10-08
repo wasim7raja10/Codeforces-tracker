@@ -179,3 +179,23 @@
     left: 115px;
   }
 }
+@media screen and (max-width: 420px) {
+  .profile_img {
+    right: 115px;
+  }
+  .profile_img_text {
+    right: 140px;
+  }
+  .profile_img_rank {
+    right: 50px;
+  }
+  .rating_title1 {
+    left: 80px;
+  }
+  .rating_title2 {
+    left: 100px;
+  }
+  .rating_title3 {
+    left: 145px;
+  }
+}
