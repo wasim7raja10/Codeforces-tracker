@@ -8,7 +8,7 @@
   }
   
   .piechart, .piechart_2{
-    overflow: auto;
+    overflow: hidden;
     height: 400px;
     width: 100%;
   }
