@@ -183,4 +183,7 @@ text.month,
   .js-calendar-graph-svg {
     padding-top: 0;
   }
+  .container{
+    100vw
+  }
 }
