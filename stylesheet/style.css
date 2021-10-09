@@ -1,20 +1,20 @@
 /*===== GOOGLE FONTS =====*/
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Courgette&family=Orbitron:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Courgette&family=Orbitron:wght@400;500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 
 :root {
   /*===== Colores =====*/
-  --first-color: #B15DFF;
-  --input-color: #80868B;
-  --border-color: #DADCE0;
-  --font-color: #D7D7D7;
+  --first-color: #b15dff;
+  --input-color: #80868b;
+  --border-color: #dadce0;
+  --font-color: #d7d7d7;
   --h1toh6-color: #e9e9e9;
 
   /*===== Fuente y tipografia =====*/
-  --body-font: 'Roboto', sans-serif;
+  --body-font: "Roboto", sans-serif;
   --normal-font-size: 1rem;
-  --small-font-size: .75rem;
+  --small-font-size: 0.75rem;
 }
 
 /******** Color Selection Reference*********/
@@ -51,7 +51,6 @@ submit button hover:#03DAC5
     margin-right: 1em;
   }
 }
-
 
 /********* Remove Scroll Effect ***********/
 html::-webkit-scrollbar {
@@ -114,7 +113,7 @@ h1 {
 }
 
 .form__title {
-  color: #D7D7D7;
+  color: #d7d7d7;
   font-weight: 400;
   margin-bottom: 3rem;
   font-size: 2rem;
@@ -132,10 +131,10 @@ h1 {
   left: 0;
   width: 100%;
   height: 100%;
-  color: #D7D7D7;
+  color: #d7d7d7;
   font-size: var(--normal-font-size);
   border: 1px solid var(--border-color);
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   outline: none;
   padding: 1rem;
   background: none;
@@ -146,37 +145,37 @@ h1 {
   position: absolute;
   left: 1rem;
   top: 1rem;
-  padding: 0 .25rem;
+  padding: 0 0.25rem;
   background-color: #262729;
   color: var(--input-color);
   font-size: var(--normal-font-size);
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .form__button {
   display: block;
   margin-left: auto;
-  padding: .75rem 2rem;
+  padding: 0.75rem 2rem;
   outline: none;
   border: none;
   background-color: var(--first-color);
   color: #fff;
   font-size: var(--normal-font-size);
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   cursor: pointer;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 .form__button:hover {
-  box-shadow: 0 10px 36px rgba(0, 0, 0, .15);
+  box-shadow: 0 10px 36px rgba(0, 0, 0, 0.15);
   background-color: #8108f3;
   color: var(--h1toh6-color);
 }
 
 /*Input focus move up label*/
-.form__input:focus+.form__label {
-  top: -.5rem;
-  left: .8rem;
+.form__input:focus + .form__label {
+  top: -0.5rem;
+  left: 0.8rem;
   color: var(--first-color);
   font-size: var(--small-font-size);
   font-weight: 500;
@@ -185,9 +184,9 @@ h1 {
 }
 
 /*Input focus sticky top label*/
-.form__input:not(:placeholder-shown).form__input:not(:focus)+.form__label {
-  top: -.5rem;
-  left: .8rem;
+.form__input:not(:placeholder-shown).form__input:not(:focus) + .form__label {
+  top: -0.5rem;
+  left: 0.8rem;
   font-size: var(--small-font-size);
   font-weight: 500;
   z-index: 10;
@@ -207,7 +206,7 @@ h1 {
 /************ End Of Username Input ************/
 
 .navbar-dark .navbar-toggler {
-  color: rgba(255, 255, 255, .55);
+  color: rgba(255, 255, 255, 0.55);
   border: none;
 }
 
@@ -216,14 +215,14 @@ h1 {
 .display-6 {
   color: var(--h1toh6-color);
   font-weight: bold;
-  font-family: 'Abril';
+  font-family: "Abril";
 }
 
 .typewrite {
-  color: #B15DFF;
+  color: #b15dff;
   text-decoration: none;
   font-weight: bold;
-  font-family: 'Abril';
+  font-family: "Abril";
 }
 
 /* To move the  graph */
@@ -252,7 +251,7 @@ h1 {
   }
 }
 
-.chart_container{
+.chart_container {
   display: flex;
   justify-content: space-evenly !important;
   align-items: center !important;
@@ -260,21 +259,30 @@ h1 {
   width: 100%;
 }
 
-.piechart, .piechart_2{
+.piechart,
+.piechart_2 {
   width: 450px;
   height: 300px;
 }
 
-@media only screen and (max-width: 1022px){
-  .chart_container{
-      flex-direction: column;
-      height: 100vh;
+@media only screen and (max-width: 1022px) {
+  .chart_container {
+    flex-direction: column;
+    height: 100vh;
   }
 }
 
-@media only screen and (max-width: 660px){
-  .piechart, .piechart_2{
+@media only screen and (max-width: 660px) {
+  .piechart,
+  .piechart_2 {
     width: 350px;
     height: 250px;
+  }
+}
+
+@media only screen and (max-width: 660px) {
+  .chart_container {
+    height: 0%;
+    padding-top: 15em;
   }
 }
