@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="./stylesheet/style.css" />
     <link rel="stylesheet" href="./stylesheet/heatmap.css" />
     <link rel="stylesheet" href="./stylesheet/piechart.css" />
+    <link rel="stylesheet" href="./stylesheet/profile.css" />
     <!-- Boxiocns CDN Link -->
     <link
       href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
@@ -393,6 +394,46 @@
         <i class="bx bx-menu" id="header-toggle"></i>
         <span class="text">Codeforces <span class="text2"> Tracker</span></span>
       </div>
+
+        <!-- Profile card -->
+        <div class="container">
+          <div class="col mt-3 mb-5">
+            <div class="profile-card ">
+              <div class="card-header" id="particles-js"></div>
+              <div class="avatar-holder">
+                <img src="./img/pimg.png" class="img-fluid" id="card-img-top" alt="responsive">
+                </div>
+              <div class="card-body" id="p-card">
+                <div class="col" id="nam">
+                  <h5 class=" name_text ">tourist</h5>
+                 <h5 class=" name_text rank_text" >LegandaryMaster</h5>
+               </div>
+                <h5 class="name_text">Rank: Legendary Grandmaster</h5>
+                <h5 class="name_text">Name: Gennady Korotkevich</h5>
+                <h5 class="name_text">From: Gomel, Belarus From ITMO University</h5>
+                <br>
+                <h5 class="name_text">Last visit: <span class="online_text">online now</span></h5>
+                <h5 class="name_text">Registered: 12 year ago</h5>
+              </div>
+              <div class="card-footer">
+                <div class="row foot">
+                  <div class="col-sm" >
+                    RATING
+                    <p class="count">3707</p>  
+                  </div>
+                  <div class="col-sm">
+                    Contribution 
+                    <p class="count">+178</p>
+                  </div>
+                  <div class="col-sm">
+                   Friends
+                   <p class="count">36,950</p>
+                  </div>
+                </div>
+              </div>
+            </div>  
+            </div>
+          </div><br>
       
         <!-- Pie Chart -->
         <div class="container">
@@ -505,5 +546,7 @@
       crossorigin="anonymous"
     ></script>
     <script src="./js/data.js"></script>
+    <script type="text/javascript" defer="defer" src="./js/particles.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   </body>
 </html>

@@ -1,0 +1,131 @@
+
+.profile-card  {
+    background-color: #262729;
+    border: none;
+    border-radius: 15px;
+    box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
+}
+
+.card-header {
+    margin-bottom: 0;
+    background-color:#1C1E1E;
+    border-radius: 10px;
+    border-bottom: 1px solid rgba(0,0,0,.125);
+    height: 150px;
+}
+.card-header:first-child {
+    border-radius: 10px 10px 0 0;
+}
+#p-card{
+    background-color: #121212;
+    border-radius:0 0 10px 10px;
+    box-shadow: none;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: .5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    color: #D7D7D7;
+}
+.name_text{
+    margin-left: 10%;
+}
+
+.card-footer {
+    padding: .5rem 1rem;
+    background-color: aq;
+}
+.foot{
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+}
+
+.col-sm{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.5rem;
+    animation: fadeInMove 2s;
+    animation-fill-mode: forwards;
+    text-align: center;
+    color: #FFFFFF;
+    
+  }
+
+
+  /* image holder */
+.avatar-holder {
+  width: 13rem;
+  height: 13rem;
+  border-radius: 50%;
+  box-shadow: 0 0 0 5px #151515,
+              inset 0 0 0 5px #000000,
+              inset 0 0 0 5px #000000,
+              inset 0 0 0 5px #000000,
+              inset 0 0 0 5px #000000,;
+  background: white;
+  overflow: hidden;
+  border: solid 10px #121212;
+  position: absolute; 
+  right: 220px;
+  z-index: 1;
+  top: 8rem;
+}
+#name{
+    padding-top: 6rem;
+    position: absolute;
+    right: 18rem;
+}
+.name_texts{
+    position: absolute;
+    right: 290px;
+    top: 21rem;
+}
+
+.online_text{
+  color: rgb(20, 182, 55);
+}
+.rank_text{
+  color: crimson;
+}
+  /* image size */
+#card-img-top {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+   
+  }
+  
+  .profile_img_text {
+    color: #fff;
+    position: absolute;
+    top: 100px;
+    font-size: 30px;
+    right: 262px;
+  }
+  @media only screen and (max-width: 660px) {
+    .avatar-holder{
+      display: flex;
+      width: 10rem;
+      height: 10rem;
+      margin-top: 10%;
+      right: 7rem;
+    }
+    #name{
+      margin-top:-4rem;
+      
+    }
+    .col-sm{
+      display: flex;
+      justify-content:space-around;
+      
+    }
+    #p-card{
+        flex: 1 1 auto;
+        padding:8rem 1rem 1rem;
+    }
+   
+  } 

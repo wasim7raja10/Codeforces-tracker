@@ -22,7 +22,7 @@
     background-color: #616161;
     border: none;
     border-radius: 10px;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
  
 }
   .card-header{
@@ -32,8 +32,7 @@
 
   .card-body{
     background-color: #262729;
-    border-radius:  0 0 10px 10px ;
-      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border-radius:  0 0 10px 10px ;  
 }
 
 

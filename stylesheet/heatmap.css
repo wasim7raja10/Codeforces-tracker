@@ -57,7 +57,7 @@
 .chart {
   height: 450px;
   border-radius: 0 0 10px 10px;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  box-shadow: rgb(0 0 0 / 35%) 0px 5px 15px;
   background-color: #262729;
 }
 
@@ -182,8 +182,5 @@ text.month,
   }
   .js-calendar-graph-svg {
     padding-top: 0;
-  }
-  .container{
-    100vw
   }
 }
