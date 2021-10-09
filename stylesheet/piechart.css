@@ -6,6 +6,10 @@
     width: 100%;
 
   }
+
+  .histogram{
+    padding-bottom: 95px;
+  }
   
   .piechart, .piechart_2{
     overflow: hidden;
@@ -33,8 +37,26 @@
 }
 
 
+#columnchart_values{
+  width:100%;
+  height: 400px;
+  overflow: hidden;
+}
 
+#columnchart_values_2{
+  width:100%;
+  height: 400px;
+  overflow: hidden;
+}
 
+@media only screen and (max-width: 660px){
+  #columnchart_values{
+    height: 250px;
+  }
+  #columnchart_values_2{
+    height: 250px;
+  }
+}
   
   @media only screen and (max-width: 1022px){
     .chart_container{

@@ -197,6 +197,103 @@
       
     };
     </script>
+   <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+   <script type="text/javascript">
+         google.charts.load("current", {packages:['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+    function drawChart() {
+
+      var data = google.visualization.arrayToDataTable([
+        ["Problem","Level", { role: "style" } ],
+        ["A", 250, "color: #b15dff"],
+        ["B", 70, "#b15dff"],
+        ["C", 100, "#b15dff"]
+        // ["C", 170, "#8906d4"]
+      ]);
+      var data_2 = google.visualization.arrayToDataTable([
+      ["Score","Ranking", { role: "style" } ],
+        ["1300", 50, "#b15dff"],
+        ["900", 120, "color: #b15dff"],
+        ["800", 50, "#b15dff"],
+        ["900", 120, "color: #b15dff"],
+        ["800", 50, "#b15dff"],
+        ["900", 120, "color: #b15dff"]
+      ]);
+      var view = new google.visualization.DataView(data);
+      var view_2 = new google.visualization.DataView(data_2);
+      var options = {
+
+
+        backgroundColor: '#262729',
+        titleTextStyle: {
+            color: 'white'
+         },
+        bar: {groupWidth: "50%"},
+
+
+        hAxis: {
+        textStyle: {
+            color: 'white',
+            minSpacing: 20
+        },
+        titleTextStyle: {
+            color: 'white'
+        },
+        
+    },
+    vAxis: {
+        textStyle: {
+            color: 'white'
+        },
+        titleTextStyle: {
+            color: 'white'
+        }
+    },
+    
+
+
+        legend: { position: "none" },chartArea:{left:40,top:20,width:'90%',height:'90%'},
+
+      };
+      var options_2 = {
+        backgroundColor: '#262729',
+        titleTextStyle: {
+            color: 'white'
+         },
+         textStyle:{color:"white"},
+        bar: {groupWidth: "50%"},
+
+
+        hAxis: {
+        textStyle: {
+            color: 'white'
+        },
+        titleTextStyle: {
+            color: 'white'
+        }
+    },
+    vAxis: {
+        textStyle: {
+            color: 'white'
+        },
+        titleTextStyle: {
+            color: 'white'
+        }
+    },
+
+
+        legend: { position: "none" ,textStyle: { color: 'white' } },chartArea:{left:40,top:20,width:'90%',height:'90%'},
+
+
+
+      };
+      var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values"));
+      chart.draw(view, options);
+      var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values_2"));
+      chart.draw(view_2, options_2);
+     }
+   </script>
+
   </head>
 
   <body id="body-pd">
@@ -350,9 +447,35 @@
           <div class="chart col ms-1 me-1 ps-2 mb-4" id="heatmap"></div>
         </div>
       </div>
+      
+       <!-- histogram -->
+       <div class="histogram container">
+        <div class="col mt-3 mb-4 ">
+          <div class="chart_container row">
+            <div class="col-sm-6 ">
+              <div class="card">
+                <div class=" col mt-1 ms-1 me-1 titles">
+                  <span class="row ms-4 mb-1 graphtitles ">Levels</span>
+                </div>
+                <div class="card-body" id="columnchart_values">
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <div class="card">
+                <div class=" col mt-1 ms-1 me-1 titles">
+                  <span class="row ms-4 mb-1 graphtitles ">Power Ranking</span>
+                </div>
+                <div class="card-body" id="columnchart_values_2" ">
+                </div>
+              </div>
+            </div>
+          </div>    
+          </div>
+        </div>
 
     </section>
-    <section class="footer">
+    <section class="footer mt-4" >
       <div class="foot">
         Socials
         <a href="https://github.com/wasim7raja10/Codeforces-tracker">
