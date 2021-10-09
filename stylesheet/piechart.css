@@ -1,0 +1,50 @@
+.chart_container{
+    display: flex;
+    justify-content: space-evenly !important;
+    align-items: center !important;
+    height: 400px;
+    width: 100%;
+
+  }
+  
+  .piechart, .piechart_2{
+    overflow: hidden;
+    height: 400px;
+    width: 100%;
+  }
+  
+  
+  .card{
+    background-color: #616161;
+    border: none;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+ 
+}
+  .card-header{
+      color: #FFFFFF;
+      
+  }
+
+  .card-body{
+    background-color: #262729;
+    border-radius:  0 0 10px 10px ;
+      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
+
+
+  
+  @media only screen and (max-width: 1022px){
+    .chart_container{
+        flex-direction: column;
+        height: 100vh;
+    }
+  }
+  
+  @media only screen and (max-width: 660px){
+    .piechart, .piechart_2{
+      height: 250px;
+    }
+  }
