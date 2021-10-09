@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="./stylesheet/sidenav.css" />
     <link rel="stylesheet" href="./stylesheet/style.css" />
     <link rel="stylesheet" href="./stylesheet/heatmap.css" />
+    <link rel="stylesheet" href="./stylesheet/piechart.css" />
     <!-- Boxiocns CDN Link -->
     <link
       href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
@@ -147,48 +148,54 @@
         });
       });
 
-      google.charts.load("current", { packages: ["corechart"] });
-      google.charts.setOnLoadCallback(drawChart);
+       // pie chart
 
-      function drawChart() {
-        var data = google.visualization.arrayToDataTable([
-          ["Task", "Hours per Day"],
-          ["Label 1", 11],
-          ["Label 2", 2],
-          ["Label 3", 2],
-          ["Label 4", 2],
-          ["Label 5", 7],
-          ["Label 6", 10],
-        ]);
+    google.charts.load('current', { 'packages': ['corechart'] });
+    google.charts.setOnLoadCallback(drawChart);
 
-        var options = {
-          title: "Verdict",
-          backgroundColor: "#2d2f34",
-          titleTextStyle: {
-            color: "white",
-          },
-          legend: { position: "left", textStyle: { color: "white" } },
-        };
+    function drawChart() {
+      var data = new google.visualization.DataTable();
+        data.addColumn('string', 'Product');
+        data.addColumn('number', 'Transactions');
 
-        var options_2 = {
-          title: "languages",
-          backgroundColor: "#2d2f34",
-          titleTextStyle: {
-            color: "white",
-          },
-          legend: { position: "left", textStyle: { color: "white" } },
-        };
+      var data = google.visualization.arrayToDataTable([
+        ['Task', 'Hours per Day'],
+        ['Label 1', 11],
+        ['Label 2', 2],
+        ['Label 3', 2],
+        ['Label 4', 2],
+        ['Label 5', 7],
+        ['Label 6', 10]
+      ]);
 
-        var chart = new google.visualization.PieChart(
-          document.querySelector(".piechart")
-        );
-        chart.draw(data, options);
+      var options = {
+        title: 'Verdict',
+        backgroundColor: '#262729',
+        titleTextStyle: {
+          color: '#ffffff',
+        },
+        pieHole: 0.3,
+        legend: { position: 'right', textStyle: { color: 'white' } }
+      };
+      
 
-        var chart_2 = new google.visualization.PieChart(
-          document.querySelector(".piechart_2")
-        );
-        chart_2.draw(data, options_2);
-      }
+      var options_2 = {
+        title: 'Languages',
+        backgroundColor: '#262729',
+        titleTextStyle: {
+          color: '#ffffff'
+        },
+        pieHole: 0.3,
+        legend: { position: 'right', textStyle: { color: 'white' } }
+      };
+
+      var chart = new google.visualization.PieChart(document.querySelector('.piechart'));
+      chart.draw(data, options);
+
+      var chart_2 = new google.visualization.PieChart(document.querySelector('.piechart_2'));
+      chart_2.draw(data, options_2);
+      
+    };
     </script>
   </head>
 
@@ -289,8 +296,34 @@
         <i class="bx bx-menu" id="header-toggle"></i>
         <span class="text">Codeforces <span class="text2"> Tracker</span></span>
       </div>
-      -->
+      
+        <!-- Pie Chart -->
+        <div class="container">
+          <div class="col mt-3 mb-4">
+            <div class="chart_container row">
+              <div class="col-sm-6 ">
+                <div class="card">
+                  <div class=" col mt-1 ms-1 me-1 titles">
+                    <span class="row ms-4 mb-1 graphtitles ">Verdict</span>
+                  </div>
+                  <div class="card-body piechart">
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="card">
+                  <div class=" col mt-1 ms-1 me-1 titles">
+                    <span class="row ms-4 mb-1 graphtitles ">Language</span>
+                  </div>
+                  <div class="card-body piechart_2">
+                  </div>
+                </div>
+              </div>
+            </div>    
+            </div>
+          </div><br>
 
+          <!-- Heatmap -->
       <div class="container">
         <div class="col mt-3 mb-4">
           <div class="col mt-1 ms-1 me-1 titles">
