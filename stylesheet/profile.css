@@ -71,7 +71,7 @@
   border: solid 10px #121212;
   position: absolute; 
   right: 220px;
-  z-index: 1;
+  /* z-index: 1; */
   top: 8rem;
 }
 #name{
