@@ -218,9 +218,13 @@
   width: calc(100% - 78px);
 }
 .home-section .home-content {
-  height: 75px;
-  display: flex;
-  align-items: center;
+    height: 75px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #121212;
+    position: fixed;
+    z-index: 1;
 }
 .home-section .home-content .bx-menu,
 .home-section .home-content .text {
@@ -234,33 +238,6 @@
 .home-section .home-content .text {
   font-size: 26px;
   font-weight: 600;
-}
-
-/* footer part  */
-.footer {
-  padding: 1rem;
-  background-color: #1f1b24;
-  color: white;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  left: 260px;
-  width: calc(100% - 260px);
-  transition: all 0.5s ease;
-  position: fixed;
-  bottom: 0;
-}
-
-.sidebar.close ~ .footer {
-  left: 78px;
-  width: calc(100% - 78px);
-}
-.foot {
-  display: flex;
-  gap: 8px;
-}
-.footer a {
-  color: white;
 }
 
 /* Responsivne  */
