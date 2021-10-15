@@ -13,12 +13,14 @@
         <!-- Font Awesome -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css" />
         <!-- Google Fonts Roboto -->
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
     <link rel="stylesheet" href="./stylesheet/sidenav.css" />
     <link rel="stylesheet" href="./stylesheet/style.css" />
     <link rel="stylesheet" href="./stylesheet/heatmap.css" />
     <link rel="stylesheet" href="./stylesheet/piechart.css" />
     <link rel="stylesheet" href="./stylesheet/profile.css" />
+
+    
     <!-- Boxiocns CDN Link -->
     <link
       href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
@@ -40,6 +42,7 @@
       type="text/javascript"
       src="https://www.gstatic.com/charts/loader.js"
     ></script>
+ 
 
     <script type="text/javascript">
       //Generate random number between min and max
@@ -399,7 +402,7 @@
       </div><br>
 
         <!-- Profile card -->
-        <div class="container pt-5">
+        <div class="container pt-5" >
           <div class="col mt-3 mb-5">
             <div class="profile-card ">
               <div class="card-header" id="particles-js"></div>
@@ -439,15 +442,15 @@
           </div><br>
       
         <!-- Pie Chart -->
-        <div class="container">
-          <div class="col mt-3 mb-4">
-            <div class="chart_container row">
+        <div class="container" >
+          <div class="col mt-3 mb-4" >
+            <div class="chart_container row" >
               <div class="col-sm-6 ">
                 <div class="card">
                   <div class=" col mt-1 ms-1 me-1 titles">
                     <span class="row ms-4 mb-1 graphtitles ">Verdict</span>
                   </div>
-                  <div class="card-body piechart">
+                  <div class="card-body piechart" >
                   </div>
                 </div>
               </div>
@@ -468,7 +471,7 @@
       <div class="container">
         <div class="col mt-3 mb-4">
           <div class="card text-center" id="heatmap-card">
-            <div class=" col titles">
+            <div class=" col titles" >
               <span class="row mt-1 ms-4 mb-1 graphtitles ">Year Logs</span>
             </div>
             <div class="card-body chart col ps-2 mb-4"  id="heatmap">
@@ -502,7 +505,7 @@
        <div class="histogram container">
         <div class="col mt-3 mb-4 ">
           <div class="chart_container row">
-            <div class="col-sm-6 ">
+            <div class="col-sm-6">
               <div class="card">
                 <div class=" col titles">
                   <span class="row mt-1 ms-4 mb-1 graphtitles ">Levels</span>
@@ -524,6 +527,80 @@
           </div>
         </div>
 
+        <!-- Stats -->
+        <div class="container">
+          <div class="col mt-3 mb-4">
+            <div class="card text-center" id="heatmap-card">
+              <div class=" col titles">
+                <span class="row mt-1 ms-4 mb-1 graphtitles ">Stats</span>
+              </div>
+                <ul class="list-group list-group-horizontal prblm-name mb-2 mt-5 ">
+                  <li class="list-group-item text-start ">Tried</li>
+                  <li class="list-group-item">228</li>
+                </ul>
+                <ul class="list-group list-group-horizontal prblm-name mb-2 ">
+                  <li class="list-group-item text-start ">Solved </li>
+                  <li class="list-group-item"> 205</li>
+                </ul>
+                <ul class="list-group list-group-horizontal prblm-name mb-2 ">
+                  <li class="list-group-item text-start ">Average attempts</li>
+                  <li class="list-group-item"> 2.55</li>
+                </ul>
+                <ul class="list-group list-group-horizontal prblm-name mb-2 ">
+                  <li class="list-group-item text-start ">Max attempts</li>
+                  <li class="list-group-item"> 121 (59.02%)</li>
+                </ul>
+                <ul class="list-group list-group-horizontal prblm-name mb-2 ">
+                  <li class="list-group-item text-start ">Solved with one submission</li>
+                  <li class="list-group-item"> 12 (1524-A)</li>
+                </ul>
+                <ul class="list-group list-group-horizontal prblm-name mb-5 ">
+                  <li class="list-group-item text-start ">Solved with one submission</li>
+                  <li class="list-group-item"> 121 (59.02%)</li>
+                </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Problems -->
+        <div class="container">
+          <div class="col mt-3 mb-4" >
+            <div class="card text-center" id="heatmap-card">
+              <div class=" col titles">
+                <span class="row mt-1 ms-4 mb-1 graphtitles ">Problems</span>
+              </div> 
+              <ul class="list-group list-group-horizontal prblm-name mb-2 mt-5 ">
+                <li class="list-group-item text-start ">Problem Name</li>
+                <li class="list-group-item">1420-A</li>
+              </ul>
+              <ul class="list-group list-group-horizontal prblm-name mb-2  ">
+                <li class="list-group-item text-start ">Problem Name</li>
+                <li class="list-group-item">1420-A</li>
+              </ul>
+              <ul class="list-group list-group-horizontal prblm-name mb-2 ">
+                <li class="list-group-item text-start ">Problem Name</li>
+                <li class="list-group-item">1420-A</li>
+              </ul>
+              <ul class="list-group list-group-horizontal prblm-name mb-2 ">
+                <li class="list-group-item text-start ">Problem Name</li>
+                <li class="list-group-item">1420-A</li>
+              </ul>
+              <ul class="list-group list-group-horizontal prblm-name mb-2 ">
+                <li class="list-group-item text-start ">Problem Name</li>
+                <li class="list-group-item">1420-A</li>
+              </ul>
+              <ul class="list-group list-group-horizontal prblm-name mb-2 ">
+                <li class="list-group-item text-start ">Problem Name</li>
+                <li class="list-group-item">1420-A</li>
+              </ul>
+              <ul class="list-group list-group-horizontal prblm-name mb-5 ">
+                <li class="list-group-item text-start ">Problem Name</li>
+                <li class="list-group-item">1420-A</li>
+              </ul>
+          </div>
+        </div>
+      </div>
+
        <!-- footer -->
         <footer class=" text-center text-white" style="background-color: #1F1B24;">
             <section class="mb-">
@@ -534,7 +611,7 @@
             </section>
           <!-- Copyright -->
           <div class="text-center p-3" style="background-color: #1F1B24;">
-            © 2021 Copyright:
+            © 2021 Copyright
             <span class="text-white" href="https://mdbootstrap.com/">Codeforces Tracker</span>
           </div>
         </footer> 
@@ -547,6 +624,7 @@
       integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
       crossorigin="anonymous"
     ></script>
+
     <script src="./js/data.js"></script>
     <script type="text/javascript" defer="defer" src="./js/particles.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
