@@ -42,6 +42,7 @@
     ></script>
 
     <script type="text/javascript">
+    
       //Generate random number between min and max
       function randomInt(min, max) {
         return Math.floor(Math.random() * (max - min + 1) + min);
@@ -74,6 +75,8 @@
 
         return return_list;
       }
+     
+
       $(document).ready(function () {
         $("#github_chart_1").github_graph({
           //Generate random entries from 50-> 200 entries
@@ -200,9 +203,11 @@
       chart_2.draw(data, options_2);
       
     };
+  
     </script>
    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
    <script type="text/javascript">
+   
          google.charts.load("current", {packages:['corechart']});
     google.charts.setOnLoadCallback(drawChart);
     function drawChart() {
@@ -296,6 +301,8 @@
       var chart = new google.visualization.ColumnChart(document.getElementById("columnchart_values_2"));
       chart.draw(view_2, options_2);
      }
+
+     
    </script>
 
   </head>
@@ -470,7 +477,29 @@
           <div class="card text-center" id="heatmap-card">
             <div class=" col titles">
               <span class="row mt-1 ms-4 mb-1 graphtitles ">Year Logs</span>
+              <div class="yearselector">
+                <label>
+                    <select class="row mt-1 ms-4 mb-1 graphtitles " name="yearSelect" id="yearList"f style="font-size: .9em !important">
+                        <option value="" selected="">Choose year</option>
+                            <option value="2021">2021</option>
+                            <option value="2020">2020</option>
+                            <option value="2019">2019</option>
+                            <option value="2018">2018</option>
+                            <option value="2017">2017</option>
+                            <option value="2016">2016</option>
+                            <option value="2015">2015</option>
+                            <option value="2014">2014</option>
+                            <option value="2013">2013</option>
+                            <option value="2012">2012</option>
+                            <option value="2011">2011</option>
+                            <option value="2010">2010</option>
+                    </select>
+                </label>
             </div>
+              
+              
+            </div>
+            
             <div class="card-body chart col ps-2 mb-4"  id="heatmap">
             </div>
             <div class="heatmap-footer mb-4 text-center"> 
@@ -546,9 +575,22 @@
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
       crossorigin="anonymous"
-    ></script>
+    > </script>
     <script src="./js/data.js"></script>
     <script type="text/javascript" defer="defer" src="./js/particles.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+  <script>function getYear(){
+    var years = document.getElementById('yearList');
+    if(years){
+    years.addEventListener('change',function(){
+     for(let x =0; x < years.options.length; x++){
+      selectedYear = years.options[x].selected;
+      if(selectedYear){
+         console.log(years.options[x].value);
+      }
+    }
+
+    }, false)};
+   }; getYear();</script>  
   </body>
 </html>
